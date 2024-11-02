@@ -1,22 +1,13 @@
 public class ServiceStation {
-    public void check(Car car, Bicycle bicycle, Truck truck) {
-        if (car != null) {
-            System.out.println("Обслуживаем " + car.modelName);
-            for (int i = 0; i < car.wheelsCount; i++) {
-                car.updateTyre();
+    public void check(Service vehicle) {
+        if (vehicle != null) {
+            System.out.println("Обслуживаем " + ((Vehicle) vehicle).modelName);
+            for (int i = 0; i < ((Vehicle) vehicle).wheelsCount; i++) {
+                vehicle.updateTyre();
             }
-            car.checkEngine();
-        } else if (truck != null) {
-            System.out.println("Обслуживаем " + truck.modelName);
-            for (int i = 0; i < truck.wheelsCount; i++) {
-                truck.updateTyre();
-            }
-            truck.checkEngine();
-            truck.checkTrailer();
-        } else if (bicycle != null) {
-            System.out.println("Обслуживаем " + bicycle.modelName);
-            for (int i = 0; i < bicycle.wheelsCount; i++) {
-                bicycle.updateTyre();
+            vehicle.checkEngine();
+            if (vehicle instanceof Truck) {
+                ((Truck) vehicle).checkTrailer();
             }
         }
     }
