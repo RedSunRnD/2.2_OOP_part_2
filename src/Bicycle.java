@@ -4,12 +4,8 @@ public class Bicycle extends Vehicle {
         super(modelName, wheelsCount);
     }
 
-    public void updateTyre() {
-        System.out.println("Меняем покрышку");
-    }
-
     @Override
-    public void checkEngine() {
-        System.out.println("У велосипеда " + modelName + " нет двигателя для проверки.");
+    public void updateTyre() {
+        System.out.println("Меняем покрышку на велосипеде");
     }
 }
