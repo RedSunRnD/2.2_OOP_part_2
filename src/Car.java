@@ -4,11 +4,6 @@ public class Car extends Vehicle {
         super(modelName, wheelsCount);
     }
 
-    @Override
-    public void updateTyre() {
-        System.out.println("Меняем покрышку на автомобиле");
-    }
-
     public void checkEngine() {
         System.out.println("Проверяем двигатель автомобиля");
     }

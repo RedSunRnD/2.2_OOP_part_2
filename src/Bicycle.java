@@ -5,7 +5,7 @@ public class Bicycle extends Vehicle {
     }
 
     @Override
-    public void updateTyre() {
-        System.out.println("Меняем покрышку на велосипеде");
+    public void performService() {
+        super.performService();
     }
 }

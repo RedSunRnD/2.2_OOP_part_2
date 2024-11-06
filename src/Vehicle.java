@@ -11,20 +11,13 @@ public abstract class Vehicle implements Serviceable {
         return modelName;
     }
 
-    public void setModelName(String modelName) {
-        this.modelName = modelName;
-    }
-
     public int getWheelsCount() {
         return wheelsCount;
     }
 
-    public void setWheelsCount(int wheelsCount) {
-        this.wheelsCount = wheelsCount;
+    public void updateTyre() {
+        System.out.println("Меняем покрышку");
     }
-
-    @Override
-    public abstract void updateTyre();
 
     @Override
     public void performService() {
